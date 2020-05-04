@@ -1,24 +1,20 @@
 package com.xp.solid.openclose;
 
+import java.util.List;
+
 public class AreaCal {
-    Shape s;
+    List<Shape> shapes;
     public AreaCal(Shape s) {
-        this.s = s;
+        shapes.add(s);
     }
 
-    //Original code violate the Open-Close Principle
-    public double getArea() {
+
+    public double getTotalArea() {
         double result=0;
-        if (s instanceof Triangle) {
-            result = ((Triangle) s).height*((Triangle) s).width/2;
+        for (Shape s: shapes) {
+            result += s.getArea();
         }
-        else if (s instanceof Circle) {
-             result = Math.PI * Math.pow(((Circle) s).diameter,2)/4;
-        }
-
         return result;
-
-        //return s.getArea();
 
     }
 

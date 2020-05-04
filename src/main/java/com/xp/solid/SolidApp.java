@@ -14,21 +14,21 @@ public class SolidApp {
 
         //1. Single responsibility
 
-        AccountManager am = new AccountManager();
-        Account a = am.getAccount(1);
-        //I want to get JSON format
-        ObjectMapper om = new ObjectMapper();
-        System.out.println("=====>"+om.writeValueAsString(a));
-
-        //I want to get XML format
-        XmlMapper xmlMapper = new XmlMapper();
-        System.out.println("=====>"+ xmlMapper.writeValueAsString(a));
+//        AccountManager am = new AccountManager();
+//        Account a = am.getAccount(1);
+//        //I want to get JSON format
+//        ObjectMapper om = new ObjectMapper();
+//        System.out.println("=====>"+om.writeValueAsString(a));
+//
+//        //I want to get XML format
+//        XmlMapper xmlMapper = new XmlMapper();
+//        System.out.println("=====>"+ xmlMapper.writeValueAsString(a));
 
         //2.Violation of Liskov
         //Solution:
         // if Rectangle is mutable? or if both Rectangle and Square implement a interface ==> Model behaviour
-//        Square s = new Square();
-//        System.out.println("=====>"+calRectangle(s));
+        Square s = new Square();
+        System.out.println("=====>"+calRectangle(s));
 
     }
 
