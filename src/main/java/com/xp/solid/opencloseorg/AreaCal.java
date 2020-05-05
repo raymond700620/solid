@@ -24,7 +24,10 @@ public class AreaCal
             return Math.PI * ((Circle) s).diameter/4;
         }
         else if (s instanceof Triganle){
-            return ((Triganle)s).height * ((Triganle)s).width /4;
+            return ((Triganle)s).height * ((Triganle)s).width /2;
+        }
+        else if (s instanceof Square) {
+            return ((Square)s).length*((Square)s).length;
         }
         else {
             throw new RuntimeException("Unknown Shape");

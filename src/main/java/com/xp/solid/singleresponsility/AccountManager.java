@@ -17,7 +17,9 @@ public class AccountManager {
 
     public Account getAccount(long id) {
         Account result = repo.get(id);
-
+         //Turn account into JSON
         return result;
     }
+
+
 }

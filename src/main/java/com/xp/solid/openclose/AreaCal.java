@@ -4,7 +4,7 @@ import java.util.List;
 
 public class AreaCal {
     List<Shape> shapes;
-    public AreaCal(Shape s) {
+    public void addShape(Shape s) {
         shapes.add(s);
     }
 
